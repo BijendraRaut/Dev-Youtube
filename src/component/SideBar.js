@@ -7,7 +7,7 @@ const SideBar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="grid col-span-1 m-3 p-4 shadow-lg">
+    <div className="m-3 p-4 shadow-lg">
       <ul>
         <li>Home</li>
         <li>Shorts</li>
