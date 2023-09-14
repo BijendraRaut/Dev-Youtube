@@ -37,8 +37,8 @@ const Header = () => {
       </div>
       <div className="col-span-1">
         <img
-          className="h-10"
-          src="https://www.pngitem.com/pimgs/m/24-248235_user-profile-avatar-login-account-fa-user-circle.png"
+          className="h-10 rounded-full"
+          src="https://mbassets.b-cdn.net/cdni/avtar-u/1678328911_044416400.jpg?w=500&q=50"
           alt="user"
         />
       </div>
