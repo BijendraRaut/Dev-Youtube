@@ -3,12 +3,16 @@ import Button from "./Button";
 
 const list = [
   "All",
+  "Coding",
+  "Gadgets",
   "Gaming",
+  "Programming",
   "Songs",
   "Live",
+  "New to you",
   "Soccer",
   "Cricket",
-  "Cooking",
+  "Recently uploaded",
   "News",
   "Space",
 ];
