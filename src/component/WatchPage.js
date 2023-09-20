@@ -5,11 +5,12 @@ import { useSearchParams } from "react-router-dom";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("v"));
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
   });
+
   return (
     <div className="px-5">
       <iframe
