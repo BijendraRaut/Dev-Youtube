@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { toggleMenu } from "./utils/appSlice";
 import { useDispatch } from "react-redux";
+import { YOUTUBE_SUGGESTIONS_API_ } from "./utils/constants";
 
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => getSearchSuggestions(), 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchQuery]);
+
+  const getSearchSuggestions = async () => {
+    const data = await fetch(YOUTUBE_SUGGESTIONS_API_ + searchQuery);
+    const json = await data.json();
+    console.log(json[1]);
+  };
+
   const dispatch = useDispatch();
 
   const toggleMenuHandler = () => {
@@ -27,13 +43,24 @@ const Header = () => {
         </a>
       </div>
       <div className="col-span-10 px-10">
-        <input
-          className="w-1/2 rounded-l-full border outline-none border-gray-400 p-1 mt-2 mb-3"
-          type="text"
-        />
-        <button className="border border-gray-400 rounded-r-full p-1 bg-gray-100">
-          🔍
-        </button>
+        <div>
+          <input
+            className="w-1/2 rounded-l-full border outline-none border-gray-400 p-1 mt-2 mb-3"
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button className="border border-gray-400 rounded-r-full p-1 bg-gray-100">
+            🔍
+          </button>
+        </div>
+      </div>
+      <div className="fixed shadow-lg border-gray-500 w-96 rounded-r-lg px-5 py-2 bg-gray-100">
+        <ul>
+          <li className="py-2 shadow-sm">Ipho</li>
+          <li>Iphone</li>
+          <li>Iphone 13</li>
+        </ul>
       </div>
       <div className="col-span-1">
         <img
