@@ -5,7 +5,7 @@ import { YOUTUBE_SUGGESTIONS_API_ } from "./utils/constants";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [suggestions, setSuggestions] = useState([]);
   useEffect(() => {
     const timer = setTimeout(() => getSearchSuggestions(), 3000);
     return () => {
@@ -16,7 +16,7 @@ const Header = () => {
   const getSearchSuggestions = async () => {
     const data = await fetch(YOUTUBE_SUGGESTIONS_API_ + searchQuery);
     const json = await data.json();
-    console.log(json[1]);
+    setSuggestions(json[1]);
   };
 
   const dispatch = useDispatch();
@@ -54,14 +54,17 @@ const Header = () => {
             🔍
           </button>
         </div>
+        <div className="fixed shadow-lg border-gray-500 w-96 rounded-r-lg px-5 py-2 bg-white border border-gray-100">
+          <ul>
+            {suggestions.map((s) => (
+              <li key={s} className="py-2 shadow-sm hover:bg-gray-100">
+                {s}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div className="fixed shadow-lg border-gray-500 w-96 rounded-r-lg px-5 py-2 bg-gray-100">
-        <ul>
-          <li className="py-2 shadow-sm">Ipho</li>
-          <li>Iphone</li>
-          <li>Iphone 13</li>
-        </ul>
-      </div>
+
       <div className="col-span-1">
         <img
           className="h-10 rounded-full"
