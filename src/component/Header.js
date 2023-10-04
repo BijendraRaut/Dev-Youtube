@@ -33,11 +33,17 @@ const Header = () => {
         [searchQuery]: json[1],
       })
     );
-    console.log(json[1]);
   };
 
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
+  };
+
+  // Function to handle suggestion click
+  const handleSuggestionClick = (clickedSuggestion) => {
+    setSearchQuery(clickedSuggestion);
+    setShowSuggestion(false); // Close the suggestion dropdown
+    // You can now perform a search or any other action here with the clicked suggestion.
   };
 
   return (
@@ -75,7 +81,11 @@ const Header = () => {
           <div className="absolute shadow-lg border-gray-500 w-96 rounded-r-lg px-5 py-2 bg-white border border-gray-100">
             <ul>
               {suggestions.map((s) => (
-                <li key={s} className="py-2 shadow-sm hover:bg-gray-100">
+                <li
+                  key={s}
+                  className="py-2 shadow-sm hover:bg-gray-100"
+                  onClick={() => handleSuggestionClick(s)} // Add click handler to each suggestion
+                >
                   {s}
                 </li>
               ))}
