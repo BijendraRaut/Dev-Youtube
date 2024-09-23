@@ -1,11 +1,36 @@
-# Getting Started with Create React App
+# YouTube Web App - README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##  Overview
+
+This project is a YouTube web app built using React and Tailwind CSS, providing users with features like searching for videos, viewing video details, fetching comments, suggested videos, live comments, and more. The app integrates seamlessly with the YouTube API to deliver real-time data and smooth user experiences.
+
+## Features
+
+- ### Search Bar: Allows users to search for videos using keywords and get relevant video results.
+- ### Video Player: Plays selected videos with essential controls like play, pause, and fullscreen.
+- ### Comments Section: Displays comments for each video fetched using the YouTube API.
+- ### Live Comments: Real-time live comment feed for live-streaming videos.
+- ### Suggested Videos: Displays a list of related or suggested videos.
+- ### Responsive Design: Optimized for different screen sizes using Tailwind CSS.
+
+
+## Tech Stack
+- ### React: Used for building the user interface and handling component-based architecture.
+- ### Tailwind CSS: For designing a responsive and aesthetically pleasing UI.
+- ### YouTube API: To fetch video data, comments, and other relevant information.
+
+  
+## Getting Started
+### Prerequisites
 
 In the project directory, you can run:
+To run this project locally, you'll need the following:
 
+- ### Node.js(v12 or above)
+- ### npm or yarn
+  
 ### `npm start`
 
 Runs the app in the development mode.\
