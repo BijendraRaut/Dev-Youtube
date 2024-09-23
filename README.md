@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/bfcfc0ce-94d8-4dfe-af35-3ca8b3bb2e82)
+
 # YouTube Web App - README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -29,6 +31,8 @@ To run this project locally, you'll need the following:
 
 - **Node.js** (v12 or above)
 - **npm** or **yarn**
+![image](https://github.com/user-attachments/assets/991501a1-d2b5-4ec7-990a-a19ed94ba997)
+
 
 ### Installation
 
