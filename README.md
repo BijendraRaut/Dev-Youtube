@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/bfcfc0ce-94d8-4dfe-af35-3ca8b3bb2e82)
+
 
 # YouTube Web App - README
 
